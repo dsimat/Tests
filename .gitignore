@@ -13,6 +13,9 @@ dist/
 .venv/
 .uv/
 
+# Linter and formatter
+.ruff_cache/
+
 # Testing artifacts
 .pytest_cache/
 .coverage
