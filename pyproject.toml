@@ -1,18 +1,28 @@
-[project]
+[project] # project metadata
 name = "test_package"
 version = "0.1.0"
 description = "A test package"
 authors = [{ name = "Dimitrios Simatos" }]
 readme = "README.md"
 requires-python = ">=3.10"
+dependencies = []  # runtime dependencies go here
 
-[project.urls]
-Homepage = "https://example.com"
+[tool.uv] # uv configuration
+dependencies = []
+dev-dependencies = ["pytest>=9.0.1", "ruff>=0.0.350"]  # dev-only deps (linting + testing)
 
-[tool.pytest.ini_options]
+[tool.pytest.ini_options] # pytest configuration
 testpaths = ["tests"]
-pythonpath = ["src"] # pythonpath points to package source code directory
+pythonpath = ["src"]  # points to your package source
 
-[build-system]
-requires = ["setuptools"]
+[tool.ruff] # ruff configuration
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint] # linting rules
+select = ["F", "E", "W", "I", "B"]
+ignore = []
+
+[build-system] # build system configuration
+requires = ["setuptools>=65.5.0", "wheel"]
 build-backend = "setuptools.build_meta"
