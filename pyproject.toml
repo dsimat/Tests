@@ -9,9 +9,9 @@ dependencies = [
     "pytest>=9.0.1",
 ]  # runtime dependencies go here
 
-[tool.uv] # uv configuration
+[dependency-groups] # uv configuration
 # dependencies = []
-dev-dependencies = ["pytest>=9.0.1", "ruff>=0.0.350"]  # dev-only deps (linting + testing)
+dev = ["pytest>=9.0.1", "ruff>=0.0.350"]  # dev-only deps (linting + testing)
 
 [tool.pytest.ini_options] # pytest configuration
 testpaths = ["tests"]
