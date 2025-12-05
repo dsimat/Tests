@@ -10,7 +10,6 @@ dependencies = [
 ]  # runtime dependencies go here
 
 [dependency-groups] # uv configuration
-# dependencies = []
 dev = ["pytest>=9.0.1", "ruff>=0.0.350"]  # dev-only deps (linting + testing)
 
 [tool.pytest.ini_options] # pytest configuration
