@@ -107,6 +107,9 @@ wheels = [
 name = "test-package"
 version = "0.1.0"
 source = { editable = "." }
+dependencies = [
+    { name = "pytest" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -115,6 +118,7 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "pytest", specifier = ">=9.0.1" }]
 
 [package.metadata.requires-dev]
 dev = [
