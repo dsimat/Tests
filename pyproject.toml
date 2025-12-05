@@ -5,10 +5,12 @@ description = "A test package to test the functionality of pytest."
 authors = [{ name = "Dimitrios Simatos" }]
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []  # runtime dependencies go here
+dependencies = [
+    "pytest>=9.0.1",
+]  # runtime dependencies go here
 
 [tool.uv] # uv configuration
-dependencies = []
+# dependencies = []
 dev-dependencies = ["pytest>=9.0.1", "ruff>=0.0.350"]  # dev-only deps (linting + testing)
 
 [tool.pytest.ini_options] # pytest configuration
