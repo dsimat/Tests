@@ -1,5 +1,6 @@
-from test_package.factorial import factorial
 import pytest
+
+from test_package.factorial import factorial
 
 
 def test_positive():

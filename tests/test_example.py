@@ -1,5 +1,6 @@
-from test_package.example import distance, kinetic_energy
 import math
+
+from test_package.example import distance, kinetic_energy
 
 
 def test_distance() -> None:
