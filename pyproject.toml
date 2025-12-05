@@ -1,7 +1,7 @@
 [project] # project metadata
 name = "test_package"
 version = "0.1.0"
-description = "A test package"
+description = "A test package to test the functionality of pytest."
 authors = [{ name = "Dimitrios Simatos" }]
 readme = "README.md"
 requires-python = ">=3.10"
