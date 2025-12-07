@@ -4,6 +4,7 @@ from test_package.example import distance, kinetic_energy
 
 
 def test_distance() -> None:
+    """Test the distance function"""
     assert distance((3, 0), (0, 4)) == 5.0
     assert distance((1, 2), (4, 6)) == 5.0
     assert distance((0, 0), (0, 0)) == 0.0
@@ -12,6 +13,7 @@ def test_distance() -> None:
 
 
 def test_kinetic_energy() -> None:
+    """Test the kinetic_energy function"""
     assert kinetic_energy(2, 3) == 9.0
     assert kinetic_energy(0, 10) == 0.0
     assert kinetic_energy(5, 0) == 0.0
