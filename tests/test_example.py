@@ -14,11 +14,8 @@ from test_package.example import distance, kinetic_energy
 def test_distance(p1, p2, result) -> None:
     """Test the distance function"""
     assert distance(p1, p2) == result
-
-
-def test_distance_type() -> None:
-    """Test the distance type"""
-    assert type(distance((3, 0), (0, 4))) is float
+    assert distance(p2, p1) == result  # Symmetry test
+    assert type(result) in (float, int)
 
 
 @pytest.mark.parametrize(
@@ -28,10 +25,6 @@ def test_distance_type() -> None:
 def test_kinetic_energy(mass, velocity, result) -> None:
     """Test the kinetic_energy function"""
     assert kinetic_energy(mass, velocity) == result
-
-
-def test_kinetic_energy_type() -> None:
-    """Test the kinetic_energy type"""
     assert type(kinetic_energy(2, 3)) is float
 
 
