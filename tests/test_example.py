@@ -11,7 +11,9 @@ from test_package.example import distance, kinetic_energy
         ((0, 0), (0, 0), 0.0),
     ],
 )
-def test_distance(p1, p2, result) -> None:
+def test_distance(
+    p1: tuple[float, float], p2: tuple[float, float], result: float
+) -> None:
     """Test the distance function"""
     assert distance(p1, p2) == result
     assert distance(p2, p1) == result  # Symmetry test
