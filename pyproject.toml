@@ -16,8 +16,8 @@ dev = [
 ]  # dev-only deps (linting + testing)
 
 [tool.pytest.ini_options] # pytest configuration
-testpaths = ["tests"]
-pythonpath = ["src"]  # points to your package source
+testpaths = ["tests"] # points to the test directory
+pythonpath = ["src"]  # points to the package source
 
 [tool.ruff] # ruff configuration
 line-length = 88
