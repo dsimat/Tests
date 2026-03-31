@@ -1,1 +1,1 @@
-Package to test writing unit tests using pytest and VSCode's testing tab.
+Package to test writing unit tests using `pytest` and VSCode's testing tab.
