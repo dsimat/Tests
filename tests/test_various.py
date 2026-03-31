@@ -44,15 +44,23 @@ def test_number(number):
     assert number > 0
 
 
-# Test for file operations
-def test_file(tmp_path):
-    """Test file writing and reading"""
-    file = tmp_path / "hello.txt"
-    file.write_text("hi!")
-    assert file.read_text() == "hi!"
-
-
 # Test for exception handling
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         print(1 / 0)
+
+
+# Fixture with setup and teardown for file handling
+@pytest.fixture
+def temp_file(tmp_path):
+    file = tmp_path / "data.txt"
+    file.write_text("hello")
+
+    yield file
+
+    # tear down runs after test finishes
+    file.unlink()
+
+
+def test_temp_file(temp_file):
+    assert temp_file.read_text() == "hello"
