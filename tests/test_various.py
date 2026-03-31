@@ -1,7 +1,12 @@
 import pytest
 
 
-# Test for parameterization
+# Tests for parameterization
+@pytest.mark.parametrize("x", [1, 2, 3])
+def test_example(x):
+    assert x > 0
+
+
 @pytest.mark.parametrize(
     "a,b,result",
     [
