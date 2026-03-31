@@ -8,7 +8,7 @@ def test_example(x):
 
 
 @pytest.mark.parametrize(
-    "a,b,result",
+    "a, b, result",
     [
         (1, 2, 3),
         (3, 4, 7),
