@@ -2,6 +2,10 @@ import pytest
 
 from test_package.example import distance, kinetic_energy
 
+# Any directory containing an __init__.py becomes importable as a package.
+# In this case, you can import the functions directly from the package:
+# from test_package import distance, kinetic_energy
+
 
 @pytest.mark.parametrize(
     "p1, p2, result",
