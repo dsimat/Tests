@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pytest
 
 
@@ -25,11 +27,11 @@ def sample_list():
     return [1, 2, 3]
 
 
-def test_length(sample_list):
+def test_length(sample_list: list):
     assert len(sample_list) == 3
 
 
-def test_append(sample_list):
+def test_append(sample_list: list):
     sample_list.append(4)
     assert sample_list == [1, 2, 3, 4]
 
@@ -40,7 +42,7 @@ def number(request):
     return request.param
 
 
-def test_number(number):
+def test_number(number: int):
     assert number > 0
 
 
@@ -62,5 +64,5 @@ def temp_file(tmp_path):
     file.unlink()
 
 
-def test_temp_file(temp_file):
+def test_temp_file(temp_file: Path):
     assert temp_file.read_text() == "hello"
