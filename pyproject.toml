@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A test package to test the functionality of pytest."
 authors = [{ name = "Dimitrios Simatos" }]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = []  # runtime dependencies go here
 
 [dependency-groups] # uv configuration
@@ -21,7 +21,7 @@ pythonpath = ["src"]  # points to the package source
 
 [tool.ruff] # ruff configuration
 line-length = 88
-target-version = "py313"
+target-version = "py312"
 
 [tool.ruff.lint] # linting rules
 select = ["F", "E", "W", "I", "B"]
