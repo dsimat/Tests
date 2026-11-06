@@ -31,7 +31,8 @@ def test_distance(
 def test_kinetic_energy(mass, velocity, result) -> None:
     """Test the kinetic_energy function"""
     assert kinetic_energy(mass, velocity) == result
-    assert type(kinetic_energy(2, 3)) is float
+    assert kinetic_energy(mass, -velocity) == result
+    assert type(kinetic_energy(mass, velocity)) is float
 
 
 # Failure example for testing purposes
