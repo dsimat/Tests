@@ -21,7 +21,7 @@ def test_distance(
     """Test the distance function"""
     assert distance(p1, p2) == result
     assert distance(p2, p1) == result  # Symmetry test
-    assert type(result) in (float, int)
+    assert type(result) in (float, int), "the arguments must be float or int"
 
 
 @pytest.mark.parametrize(
@@ -32,7 +32,7 @@ def test_kinetic_energy(mass, velocity, result) -> None:
     """Test the kinetic_energy function"""
     assert kinetic_energy(mass, velocity) == result
     assert kinetic_energy(mass, -velocity) == result
-    assert type(kinetic_energy(mass, velocity)) is float
+    assert type(kinetic_energy(mass, velocity)) is float, "the result must be a float"
 
 
 # Failure example for testing purposes
